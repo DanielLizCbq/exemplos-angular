@@ -1,0 +1,15 @@
+<nav class="nav nav-pills nav-fill">
+  <a class="nav-item nav-link active" 
+    [class.active]="aba == 'home'" (click)="aba = 'home'" >Home</a>
+  <a class="nav-item nav-link" 
+    [class.active]="aba == 'contact'" (click)="aba = 'contact'">Contact</a>
+  <a class="nav-item nav-link" 
+    [class.active]="aba == 'about'" (click)="aba = 'about'">About</a>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'home'">Home</p>
+  <p *ngSwitchCase="'contact'">Contatos</p>
+  <p *ngSwitchCase="'about'">Sobre</p>
+
+</div>

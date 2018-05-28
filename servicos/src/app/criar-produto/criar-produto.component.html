@@ -1,0 +1,10 @@
+<h5>Compartilhando Serviço</h5>
+
+<input type="text" #produto >
+<button (click)="onAddProduto(produto.value)">Add Produto</button>
+
+<ul>
+  <li *ngFor="let item of produtos">{{ item }}</li>
+</ul>
+
+<app-receber-produto-criado></app-receber-produto-criado>

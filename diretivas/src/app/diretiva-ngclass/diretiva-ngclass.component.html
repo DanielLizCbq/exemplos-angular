@@ -1,0 +1,17 @@
+<h1>
+
+  <i class="glyphicon"
+    [class.glyphicon-remove]="!ok"
+    [class.glyphicon-ok]="ok"
+    (click)="onOkClick()"
+  ></i>
+
+  <i class="glyphicon"
+    [ngClass]="{
+      'glyphicon-remove': !ok,
+      'glyphicon-ok':ok
+    }"
+    (click)="onOkClick()"
+  ></i>
+
+</h1>

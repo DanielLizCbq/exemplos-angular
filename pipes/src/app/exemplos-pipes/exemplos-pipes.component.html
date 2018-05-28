@@ -1,0 +1,52 @@
+<p>Exemplos Pipes!</p>
+
+<p>Nome: {{ produto.nome | uppercase }}</p>
+<p>Maximo de Portas: {{ produto.maxPortas }}</p>
+<p>Maximo de Portas TDM: {{ produto.maxTDM }}</p>
+<p>Numero de Slots: {{ produto.slots }}</p>
+<p>Preço: {{ produto.preco | currency: 'BRL'}}</p>
+<p>Numero qualquer: {{ produto.nQq | number: '2.1-2'}}</p>
+<p>Data: {{ produto.data | date }}</p>
+<p>Produto: {{ produto | json }}</p>
+
+<input type="text" [(ngModel)]="filtro">
+<select id="selectFilter" [(ngModel)]="filterType">
+    <option value="nome">nome</option>
+    <option value="qtd">qtd</option>
+</select>
+
+<br>
+<input type="text" #novoValor>
+<button (click)="addProduto(novoValor.value)">Add Produto</button>
+
+<h5>Pipe Puro</h5>
+<ul>
+    <li *ngFor="let item of produtos | filtroArray: filtro">{{ item }}</li>
+</ul>
+
+<h5>Pipe Impuro</h5>
+<ul>
+    <li *ngFor="let item of produtos | filtroArrayImpuro: filtro">{{ item }}</li>
+</ul>
+
+<h5>Maneira correta filtros</h5>
+<ul>
+    <li *ngFor="let item of obterProdutos()">{{ item }}</li>
+</ul>
+
+<p>{{ valorAsync | async }}</p>
+<p>{{ valorAsync2 | async }}</p>
+
+
+<table class="table-striped">
+    <thead>
+        <th>Nome</th>
+        <th>Quantidade</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of obterProdutosObject()">
+            <td>{{item.nome}}</td>
+            <td>{{item.qtd}}</td>
+        </tr>
+    </tbody>
+</table>

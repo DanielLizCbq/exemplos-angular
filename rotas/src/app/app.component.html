@@ -1,0 +1,19 @@
+<nav *ngIf="mostrarMenu" >
+  <div class="nav-wrapper blue accent-2">
+    <a routerLink="" class="brand-logo right">Rotas</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li routerLinkActive="active"><a routerLink="">Home</a></li>
+      <li routerLinkActive="active"><a routerLink="produtos" [queryParams]="{pagina: 1}">Produtos</a></li>
+      <li routerLinkActive="active"><a routerLink="login">Login</a></li>
+      <!--li routerLinkActive="active"><a [routerLink]="['produto', idProduto.value]">Produto Id</a></li-->
+      <li routerLinkActive="active"><a routerLink="desenvolvedores">Desenvolvedores</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <!--p>ID do Produto</p>
+  <input #idProduto (keyup)="0"-->
+  <router-outlet></router-outlet>
+</div>
+

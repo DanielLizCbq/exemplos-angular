@@ -1,0 +1,28 @@
+<p>
+  Criar/Editar Desenvolvedor
+</p>
+
+
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input disabled [(ngModel)]="desenvolvedor.id" id="disabled" type="text" class="validate">
+        <label class="active" for="disabled">ID: </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nome" type="text" [(ngModel)]="desenvolvedor.nome" class="validate" (input)="onInput()">
+        <label class="active" for="nome">Nome</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="setor" [(ngModel)]="desenvolvedor.setor" type="text" class="validate">
+        <label class="active" for="setor">Setor</label>
+      </div>
+    </div>
+  </div>
+</div>
+        

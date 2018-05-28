@@ -1,0 +1,23 @@
+<h5>*ngIf</h5>
+
+<div *ngIf="itensL.length > 0" >
+  Lista de itens aqui.
+</div>
+
+<div *ngIf="itensL.length == 0" >
+  Não existem itens a serem listados.
+</div>
+
+<div *ngIf="mostrarItensL">
+  Lista de itens aqui.
+  <br>
+  <p *ngFor="let item of itensL" >{{ item }}</p>
+</div>
+
+<div *ngIf="!mostrarItensL" >
+  Não existem itens a serem listados.
+</div>
+
+<br>
+
+<button (click)="onMostrarItens()">Mostrar ou Esconder Itens</button>

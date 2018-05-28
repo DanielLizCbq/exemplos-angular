@@ -1,0 +1,23 @@
+<p fundoAmarelo>
+  Texto azul com fundo amarelo!
+</p>
+
+<button fundoAmarelo>Botão</button>
+
+<p highlightMouse>Texto com Highlight mouse</p>
+
+<p [highlight]="'white'" [defaultColor]="'grey'">Texto com Highlight customizado</p>
+
+<div *ngIf="mostrarItensL">
+  Lista de itens aqui.
+  <br>
+  <p *ngFor="let item of itensL" >{{ item }}</p>
+</div>
+  
+<div *ngElse="mostrarItensL" >
+  Não existem itens a serem listados.
+</div>
+
+<button (click)="onMostrarItens()">Mostrar ou Esconder Itens</button>
+  
+<br>
